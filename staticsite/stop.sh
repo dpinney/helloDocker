@@ -1,4 +1,4 @@
 #!/bin/bash
-# launch a container of the staticsite image
+# stop the staticsite container
 docker stop staticsite
 docker rm staticsite

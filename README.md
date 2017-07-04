@@ -22,15 +22,15 @@ XXX How to get a shell in to a container? `docker exec -it containerIdOrName bas
 
 XXX Look at https://sandstorm.io? Container framework, but too much GUI app focus.
 
-OOO read a real intro. https://docs.docker.com/get-started/
-
 XXX What apps to start with? Static website. Web app with a form. SomethingThatRunsRepeatedly.
 
 XXX Static website? Up and running in staticsite dir. Change the default index.html? Done. Also added some nice stop/start scripts.
 
-OOO Web app with form?
+OOO Web app with form? Maybe do it via a CGI script.
 
-OOO Something that runs repeatedly?
+OOO read a real intro. https://docs.docker.com/get-started/
+
+OOO Something that runs repeatedly? Now we're in flask territory.
 
 OOO Test out deployment to new Docker host in production.
 
