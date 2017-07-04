@@ -24,7 +24,13 @@ XXX Look at https://sandstorm.io? Container framework, but too much GUI app focu
 
 OOO read a real intro. https://docs.docker.com/get-started/
 
-OOO What apps to start with? Static website. Hello world web app with a form. SomethingThatRunsRepeatedly.
+XXX What apps to start with? Static website. Web app with a form. SomethingThatRunsRepeatedly.
+
+OOO Static website? Up and running in staticsite dir.
+
+OOO Web app with form?
+
+OOO Something that runs repeatedly?
 
 OOO Test out deployment to new Docker host in production.
 
