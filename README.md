@@ -26,7 +26,7 @@ OOO read a real intro. https://docs.docker.com/get-started/
 
 XXX What apps to start with? Static website. Web app with a form. SomethingThatRunsRepeatedly.
 
-OOO Static website? Up and running in staticsite dir.
+XXX Static website? Up and running in staticsite dir. Change the default index.html? Done. Also added some nice stop/start scripts.
 
 OOO Web app with form?
 
