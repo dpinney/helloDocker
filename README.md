@@ -14,7 +14,9 @@ XXX User interfaces I want? Web. Maybe iPython (superset of web).
 
 XXX The Docker macOS app? It passes the sniff test. Only 200 MB which is good; I was worried there would be 20 GB of VM and other junk. Download site: https://store.docker.com/editions/community/docker-ce-desktop-mac
 
-XXX Intro tutorial https://docs.docker.com/docker-for-mac/. Not a lot of useful info.
+XXX Intro tutorial for mac https://docs.docker.com/docker-for-mac/. Not a lot of useful info.
+
+XXX Read a real intro. https://docs.docker.com/get-started/
 
 XXX How to save an image to files? `docker save imageName > whatever.tgz` and then `docker load whatever.tgz`
 
@@ -26,11 +28,9 @@ XXX What apps to start with? Static website. Web app with a form. SomethingThatR
 
 XXX Static website? Up and running in staticsite dir. Change the default index.html? Done. Also added some nice stop/start scripts.
 
-OOO Web app with form? Maybe do it via a CGI script.
+OOO Web app with form? Maybe do it via a CGI script. nginx doesn't have a strong CGI interface. We're probably better off using Flask.
 
-OOO read a real intro. https://docs.docker.com/get-started/
-
-OOO Something that runs repeatedly? Now we're in flask territory.
+OOO Something that runs repeatedly?
 
 OOO Test out deployment to new Docker host in production.
 
@@ -38,8 +38,16 @@ OOO What about a small Python image? Could be fun to test.
 
 OOO Is this really portable to Windows? Test on a VM.
 
+OOO What about updates and data containers?
+
 OOO https://stackoverflow.com/questions/4705564/python-script-as-linux-service-daemon
 
 OOO https://stackoverflow.com/questions/1612733/including-non-python-files-with-setup-py
 
-OOO http://play-with-docker.com/
+XXX http://play-with-docker.com/. Easier to just use the laptop.
+
+OOO Maybe we made the wrong platform choice?
+https://www.google.com/search?client=safari&rls=en&q=getting+started+with+rkt&ie=UTF-8&oe=UTF-8
+https://www.google.com/search?client=safari&rls=en&q=getting+started+with+apache+mesos&ie=UTF-8&oe=UTF-8
+https://www.google.com/search?client=safari&rls=en&q=getting+started+with+kubernetes&ie=UTF-8&oe=UTF-8
+https://www.google.com/search?client=safari&rls=en&q=getting+started+with+vagrant&ie=UTF-8&oe=UTF-8

@@ -1,4 +1,4 @@
 #!/bin/bash
-# stop the staticsite container
+# stop and rm the staticsite container
 docker stop staticsite
 docker rm staticsite
