@@ -1,4 +1,4 @@
 #!/bin/bash
-# stop the flaskdoc container
+# stop and rm the staticsite container
 docker stop flaskdoc
 docker rm flaskdoc

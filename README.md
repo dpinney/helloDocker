@@ -24,13 +24,15 @@ XXX How to get a shell in to a container? `docker exec -it containerIdOrName bas
 
 XXX Look at https://sandstorm.io? Container framework, but too much GUI app focus.
 
+XXX http://play-with-docker.com/. Easier to just use the laptop.
+
 XXX What apps to start with? Static website. Web app with a form. SomethingThatRunsRepeatedly.
 
 XXX Static website? Up and running in staticsite dir. Change the default index.html? Done. Also added some nice stop/start scripts.
 
-OOO Web app with form? Maybe do it via a CGI script. nginx doesn't have a strong CGI interface. We're probably better off using Flask.
+XXX Web app with form? Maybe do it via a CGI script. nginx doesn't have an easy CGI interface. We're probably better off using Flask.
 
-OOO Something that runs repeatedly?
+OOO Something that runs on a timer?
 
 OOO Test out deployment to new Docker host in production.
 
@@ -43,8 +45,6 @@ OOO What about updates and data containers?
 OOO https://stackoverflow.com/questions/4705564/python-script-as-linux-service-daemon
 
 OOO https://stackoverflow.com/questions/1612733/including-non-python-files-with-setup-py
-
-XXX http://play-with-docker.com/. Easier to just use the laptop.
 
 OOO Maybe we made the wrong platform choice?
 https://www.google.com/search?client=safari&rls=en&q=getting+started+with+rkt&ie=UTF-8&oe=UTF-8
