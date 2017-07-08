@@ -4,7 +4,7 @@ Get a server in place that allows deployment of many small web apps at a reasona
 
 And it appears that redundant globally-distributed container swarms are here to stay. So I might as well learn one of those stacks.
 
-### Todo
+### Task List (XXX = Done, OOO = Todo)
 
 XXX EC2 Docker support? Good. Install docs: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
 
@@ -30,17 +30,21 @@ XXX What apps to start with? Static website. Web app with a form. SomethingThatR
 
 XXX Static website? Up and running in staticsite dir. Change the default index.html? Done. Also added some nice stop/start scripts.
 
-XXX Web app with form? Maybe do it via a CGI script. nginx doesn't have an easy CGI interface. We're probably better off using Flask.
+XXX What about a small Python image? python:alpine is great. 100 MB. Runs flask.
 
-OOO Something that runs on a timer?
+XXX Web app with form? flaskdoc up and running. Maybe do it via a CGI script. nginx doesn't have an easy CGI interface. So we went with Flask.
 
-OOO Test out deployment to new Docker host in production.
+OOO Something that runs on a timer? https://stackoverflow.com/questions/474528/what-is-the-best-way-to-repeatedly-execute-a-function-every-x-seconds-in-python
 
-OOO What about a small Python image? Could be fun to test.
+OOO Is this really portable to Windows? Move and test on a VM.
 
-OOO Is this really portable to Windows? Test on a VM.
+OOO Make sure Python scripts survive as services? Probably better to use built in restart. https://blog.codeship.com/ensuring-containers-are-always-running-with-dockers-restart-policy/
 
-OOO What about updates and data containers?
+OOO Test out deployment to Docker host in production.
+
+OOO What about data volumes and updates to them and/or the data container pattern?
+
+OOO How to better manage secrets?
 
 OOO https://stackoverflow.com/questions/4705564/python-script-as-linux-service-daemon
 
