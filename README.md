@@ -34,7 +34,7 @@ XXX What about a small Python image? python:alpine is great. 100 MB. Runs flask.
 
 XXX Web app with form? flaskdoc up and running. Maybe do it via a CGI script. nginx doesn't have an easy CGI interface. So we went with Flask.
 
-OOO Something that runs on a timer? https://stackoverflow.com/questions/474528/what-is-the-best-way-to-repeatedly-execute-a-function-every-x-seconds-in-python
+XXX Something that runs on a timer? monitorliz. Look at docs. sched library looked promising, but multiprocessing or threading is a better solution. Went with threading.
 
 OOO Is this really portable to Windows? Move and test on a VM.
 

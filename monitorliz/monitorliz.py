@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask_basicauth import BasicAuth
-import sys
+from datetime import datetime
+import sys, time, threading
 
 # Redirect Flask's request logging to file.
 sys.stderr = open('log.txt', 'a')
@@ -21,12 +22,20 @@ basic_auth = BasicAuth(app)
 def home():
 	with open(DATABASE,'r') as db:
 		lines = db.readlines()
-	return '<pre>Welcome to monitorliz.\n\nDatabase: ' + str(lines) + '</pre>'
+	return '<pre>Welcome to monitorliz.\n\nDatabase:\n' + ''.join(lines) + '</pre>'
 
 @app.route('/logs')
 @basic_auth.required
 def logs():
 	return '<pre>' + open('log.txt','r').read() + '</pre>'
 
+def workFun():
+	while True:
+		with open('database.txt','a') as db:
+			db.write('Worker woke up. It is ' + str(datetime.now()) + '\n')
+		time.sleep(10)
+
 if __name__ == '__main__':
-	app.run(debug=True, host='0.0.0.0')
+	worker = threading.Thread(target=workFun)
+	worker.start()
+	app.run(debug=True, host='0.0.0.0', threaded=True, use_reloader=False)
