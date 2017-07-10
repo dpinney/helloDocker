@@ -1,6 +1,6 @@
 ### Goal
 
-Get a server in place that allows deployment of many small web apps at a reasonable annual price ($500/year tops).
+Get a server in place that allows deployment of dozens of small web apps at a reasonable annual price ($500/year tops).
 
 And it appears that redundant globally-distributed container swarms are here to stay. So I might as well learn one of those stacks.
 
@@ -36,21 +36,19 @@ XXX Web app with form? flaskdoc up and running. Maybe do it via a CGI script. ng
 
 XXX Something that runs on a timer? monitorliz. Look at docs. sched library looked promising, but multiprocessing or threading is a better solution. Went with threading.
 
-OOO Is this really portable to Windows? Move and test on a VM.
+XXX Is this really portable? Move and test on a Windows VM. Doesn't work because it wants to use Hyper-V, VMWare will let it try, but then Docker crashes. What about an Ubuntu VM? Works like a champ.
 
-OOO Make sure Python scripts survive as services? Probably better to use built in restart. https://blog.codeship.com/ensuring-containers-are-always-running-with-dockers-restart-policy/
+XXX Make sure Python scripts survive as services? https://stackoverflow.com/questions/4705564/python-script-as-linux-service-daemon. Probably better to use built in Docker restart. https://blog.codeship.com/ensuring-containers-are-always-running-with-dockers-restart-policy/ We should test with a crasher route, have some state on the box. Seems like this isn't an issue because we can mount the stopped container. https://github.com/jpetazzo/nsenter/issues/27
 
-OOO Test out deployment to Docker host in production.
+XXX Test out deployment to Docker host in production. SSH in and pull? Yeah. It means the monitoring tools are identical to the ones in the dev environments (docker ps, docker start, etc.). Works great after fixing the AWS firewall.
 
 OOO What about data volumes and updates to them and/or the data container pattern?
 
-OOO How to better manage secrets?
-
-OOO https://stackoverflow.com/questions/4705564/python-script-as-linux-service-daemon
-
 OOO https://stackoverflow.com/questions/1612733/including-non-python-files-with-setup-py
 
-OOO Maybe we made the wrong platform choice?
+OOO How to better manage secrets?
+
+XXX Maybe we made the wrong platform choice? Nah, Docker's fine.
 https://www.google.com/search?client=safari&rls=en&q=getting+started+with+rkt&ie=UTF-8&oe=UTF-8
 https://www.google.com/search?client=safari&rls=en&q=getting+started+with+apache+mesos&ie=UTF-8&oe=UTF-8
 https://www.google.com/search?client=safari&rls=en&q=getting+started+with+kubernetes&ie=UTF-8&oe=UTF-8
