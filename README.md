@@ -42,11 +42,9 @@ XXX Make sure Python scripts survive as services? https://stackoverflow.com/ques
 
 XXX Test out deployment to Docker host in production. SSH in and pull? Yeah. It means the monitoring tools are identical to the ones in the dev environments (docker ps, docker start, etc.). Works great after fixing the AWS firewall.
 
-OOO What about data volumes and updates to them and/or the data container pattern?
+XXX How to better manage secrets? Prompt on build for secret entry or manually move a .key file.
 
-OOO https://stackoverflow.com/questions/1612733/including-non-python-files-with-setup-py
-
-OOO How to better manage secrets?
+OOO What about data volumes and updates to them and/or the data container pattern? Elaborate cloudDeploy. Call it cloud update. `docker cp CONTAINERNAME:database.txt .; ./rebuild.sh`
 
 XXX Maybe we made the wrong platform choice? Nah, Docker's fine.
 https://www.google.com/search?client=safari&rls=en&q=getting+started+with+rkt&ie=UTF-8&oe=UTF-8
