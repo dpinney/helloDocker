@@ -44,7 +44,7 @@ XXX Test out deployment to Docker host in production. SSH in and pull? Yeah. It 
 
 XXX How to better manage secrets? Prompt on build for secret entry or manually move a .key file.
 
-OOO What about data volumes and updates to them and/or the data container pattern? Elaborate cloudDeploy. Call it cloud update. `docker cp CONTAINERNAME:database.txt .; ./rebuild.sh`
+XXX What about data volumes and updates to them and/or the data container pattern? See pullDatabase.sh in monitorliz. It pulls the prod database to the host. Then if we want to reinsert it in to a new container, we just call it database.txt and run the install script. Easy.
 
 XXX Maybe we made the wrong platform choice? Nah, Docker's fine.
 https://www.google.com/search?client=safari&rls=en&q=getting+started+with+rkt&ie=UTF-8&oe=UTF-8
