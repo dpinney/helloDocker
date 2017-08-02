@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask_basicauth import BasicAuth
 from datetime import datetime
-import sys, time, threading
+import sys, time, threading, os, string, random
 
 # Redirect Flask's request logging to file.
 sys.stderr = open('log.txt', 'a')
@@ -12,10 +12,17 @@ open(DATABASE, 'a').close()
 
 app = Flask(__name__)
 
-# HACK: Secrets for auth!
+# Secrets for auth!
 app.config['BASIC_AUTH_USERNAME'] = 'john'
-app.config['BASIC_AUTH_PASSWORD'] = 'matrix'
-
+if os.path.isfile('password.txt'):
+	with open('password.txt','r') as passFile:
+		randomPassword = passFile.read()
+else:
+	# Need a new password
+	randomPassword = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in range(10))
+	with open('password.txt','w') as passFile:
+		passFile.write(randomPassword)
+app.config['BASIC_AUTH_PASSWORD'] = randomPassword
 basic_auth = BasicAuth(app)
 
 @app.route('/')
