@@ -1,0 +1,8 @@
+- XXX register for fly.io
+- XXX nice dashboard? https://fly.io/apps
+- XXX does it scale to zero? no. but there's a decent free tier.
+- XXX does it autoscale? yes between min and max instance limits.
+- XXX install flyctl, `brew install flyctl`
+- XXX app? simple append to files in volume. flaskdoc.
+- OOO local test setup, fix flyLocalStart.command.
+- OOO deploy with volume, dns?

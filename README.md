@@ -52,4 +52,4 @@ https://www.google.com/search?client=safari&rls=en&q=getting+started+with+apache
 https://www.google.com/search?client=safari&rls=en&q=getting+started+with+kubernetes&ie=UTF-8&oe=UTF-8
 https://www.google.com/search?client=safari&rls=en&q=getting+started+with+vagrant&ie=UTF-8&oe=UTF-8
 
-OOO Consider a GUI for management https://github.com/jesseduffield/lazydocker/blob/master/README.md.
+XXX Consider a GUI for management https://github.com/jesseduffield/lazydocker/blob/master/README.md. Docker itself has one now.

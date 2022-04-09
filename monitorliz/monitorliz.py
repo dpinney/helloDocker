@@ -45,4 +45,4 @@ def workFun():
 if __name__ == '__main__':
 	worker = threading.Thread(target=workFun)
 	worker.start()
-	app.run(debug=True, host='0.0.0.0', threaded=True, use_reloader=False)
+	app.run(debug=True, host='0.0.0.0', port=5000, threaded=True, use_reloader=False)

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flaskdoc</title>
+</head>
+<body>
+<p>Hi, welcome to flaskdoc. Post a message:</p>
+<form action="/addMessage" method="post">
+	<input type="text" name="msg">
+	<input type="submit" value="Submit">
+</form>
+<p>All past messages:</p>
+{% for line in lines %}
+	<p>{{line}}</p>
+{% endfor %}
+</body>
+</html>
