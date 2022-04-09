@@ -4,5 +4,6 @@
 - XXX does it autoscale? yes between min and max instance limits.
 - XXX install flyctl, `brew install flyctl`
 - XXX app? simple append to files in volume. flaskdoc.
-- OOO local test setup, fix flyLocalStart.command.
-- OOO deploy with volume, dns?
+- XXX local test setup, fix flyLocalStart.sh
+- XXX deploy with volume.
+- XXX Wire up DNS. Meh. Just a cname.

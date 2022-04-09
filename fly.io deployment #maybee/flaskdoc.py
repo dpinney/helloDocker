@@ -5,7 +5,7 @@ import sys
 sys.stderr = open('./data/log.txt', 'a')
 
 # Let's have a database file, and create a new blank one on launch if it doesn't exist.
-DATABASE = 'database.txt'
+DATABASE = './data/database.txt'
 open(DATABASE, 'a').close()
 
 app = Flask(__name__)
@@ -14,7 +14,7 @@ app = Flask(__name__)
 def home():
 	with open(DATABASE,'r') as db:
 		lines = db.readlines()
-	return render_template('./flaskdoc.html', lines=lines)
+	return render_template('flaskdoc.html', lines=lines)
 
 @app.route('/addMessage', methods=["POST"])
 def addMessage():
